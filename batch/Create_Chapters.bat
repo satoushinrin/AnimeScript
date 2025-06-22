@@ -1,5 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
+chcp 65001 >nul
 :: Script by Shinrin
 
 :: Check if no file was selected
