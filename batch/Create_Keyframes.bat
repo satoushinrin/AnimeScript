@@ -44,17 +44,5 @@ set "video=%~1"
 set "video2=%~n1"
 "%ffmpeg_path%" -i "%video%" -f yuv4mpegpipe -vf scale=640:360 -pix_fmt yuv420p -vsync drop -loglevel quiet - | "%scxvid_path%" "%video2%_keyframes.txt"
 
-CLS
-echo.
-echo. 
-echo #################################################
-REM echo #						#
-echo #						#
-echo # 	Keyframes Generator by Shinrin		#
-REM echo #						#
-echo #						#
-echo #################################################
-echo.
-echo The keyframes file has been created successfully. You may now close this command line interface.
-timeout /t 10 >nul
+powershell -c "(New-Object Media.SoundPlayer 'C:\Windows\Media\Windows Background.wav').PlaySync()"
 exit /b
